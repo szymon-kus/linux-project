@@ -6,13 +6,6 @@ Program jest narzędziem, które umożliwia użytkownikowi uzyskanie informacji 
 Wymagania
 Program działa na systemie operacyjnym Linux (pracowałem na Red Hat Enterprise Linux 9). Wymaga zainstalowanego interpretera Python 3 oraz pakietów psutil oraz cryptography.
 
-## Uruchomienie
-Aby uruchomić program, należy wywołać skrypt Pythona w terminalu:
-
-Copy code
-python3 system_program.py
-Po uruchomieniu programu użytkownikowi wyświetla się menu główne, z którego może wybrać opcje.
-
 ## Menu
 Wyświetl informacje o systemie - Wyświetla informacje o systemie operacyjnym, wersji, nazwie hosta oraz procesorze.
 Wyświetl informacje o zużyciu dysku - Wyświetla informacje o zużyciu dysku, w tym całkowitą pojemność dysku, używaną przestrzeń, wolną przestrzeń oraz procentowe zużycie dysku.
