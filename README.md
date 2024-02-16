@@ -1,10 +1,10 @@
-# Dokumentacja programu systemowego
+# Dokumentacja programu 
 ## Opis ogólny
-Program systemowy jest narzędziem, które umożliwia użytkownikowi uzyskanie informacji na temat systemu operacyjnego oraz jego zasobów takich jak dysk, pamięć, procesor, oraz połączenie z Internetem. Program pozwala również na sprawdzenie aktualizacji systemowych oraz zapisywanie danych do plików, zarówno lokalnych jak i zewnętrznych.
+Program jest narzędziem, które umożliwia użytkownikowi uzyskanie informacji na temat systemu operacyjnego oraz jego zasobów takich jak dysk, pamięć, procesor, oraz połączenie z Internetem. Program pozwala również na sprawdzenie aktualizacji systemowych oraz zapisywanie danych do plików, zarówno lokalnych jak i zewnętrznych. Zapisany plik można zaszyfrować z wykorzystaniem biblioteki Fernet. 
 
 ## Instrukcja obsługi
 Wymagania
-Program działa na systemie operacyjnym Linux. Wymaga zainstalowanego interpretera Python 3 oraz pakietów psutil oraz cryptography.
+Program działa na systemie operacyjnym Linux (pracowałem na Red Hat Enterprise Linux 9). Wymaga zainstalowanego interpretera Python 3 oraz pakietów psutil oraz cryptography.
 
 ## Uruchomienie
 Aby uruchomić program, należy wywołać skrypt Pythona w terminalu:
