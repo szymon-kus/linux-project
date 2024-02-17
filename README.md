@@ -6,23 +6,59 @@ Program jest narzędziem, które umożliwia użytkownikowi uzyskanie informacji 
 Wymagania
 Program działa na systemie operacyjnym Linux (pracowałem na Red Hat Enterprise Linux 9). Wymaga zainstalowanego interpretera Python 3 oraz pakietów psutil oraz cryptography.
 
-## Menu
-Wyświetl informacje o systemie - Wyświetla informacje o systemie operacyjnym, wersji, nazwie hosta oraz procesorze.
-Wyświetl informacje o zużyciu dysku - Wyświetla informacje o zużyciu dysku, w tym całkowitą pojemność dysku, używaną przestrzeń, wolną przestrzeń oraz procentowe zużycie dysku.
-Wyświetl informacje o zużyciu procesora - Wyświetla informacje o procentowym zużyciu procesora.
-Wyświetl informacje o zużyciu pamięci - Wyświetla informacje o pamięci RAM, w tym całkowitą pojemność RAM, używaną przestrzeń, wolną przestrzeń oraz procentowe zużycie pamięci.
-Sprawdź połączenie internetowe - Sprawdza połączenie z Internetem.
-Sprawdź aktualizacje systemowe - Sprawdza aktualizacje dla systemu operacyjnego.
-Zapisz dane do zewnętrznego pliku - Zapisuje informacje o systemie do pliku o podanej nazwie.
-Funkcje dodatkowe
-Generowanie i ładowanie klucza
-Program generuje klucz szyfrowania podczas pierwszego uruchomienia i zapisuje go do pliku encryption_key.key. Następnie klucz ten jest używany do szyfrowania i deszyfrowania danych.
+generate_key()
+Generuje nowy klucz szyfrowania i zapisuje go do pliku encryption_key.key.
 
-## Szyfrowanie i deszyfrowanie plików
-Program umożliwia szyfrowanie i deszyfrowanie plików za pomocą klucza szyfrowania. Po szyfrowaniu plików, otrzymujemy plik z rozszerzeniem .enc.
+load_key()
+Wczytuje klucz szyfrowania z pliku encryption_key.key.
+
+get_system_info()
+Zwraca słownik z informacjami o systemie operacyjnym, takimi jak nazwa systemu, nazwa hosta, wydanie, wersja i procesor.
+
+check_internet_connection()
+Sprawdza połączenie z Internetem, łącząc się z serwerem Google'a na porcie 80.
+
+get_disk_usage()
+Zwraca informacje o zużyciu dysku, takie jak całkowita pojemność dysku, używana przestrzeń, wolna przestrzeń i procentowe zużycie dysku.
+
+get_cpu_usage()
+Zwraca informacje o procentowym zużyciu procesora.
+
+get_memory_usage()
+Zwraca informacje o zużyciu pamięci RAM, takie jak całkowita pojemność RAM, używana przestrzeń, wolna przestrzeń i procentowe zużycie pamięci.
+
+display_system_info()
+Wyświetla informacje o systemie operacyjnym, nazwie hosta, wydaniu, wersji i procesorze.
+
+display_disk_usage()
+Wyświetla informacje o zużyciu dysku, takie jak całkowita pojemność dysku, używana przestrzeń, wolna przestrzeń i procentowe zużycie dysku.
+
+display_cpu_usage()
+Wyświetla informacje o procentowym zużyciu procesora.
+
+display_memory_usage()
+Wyświetla informacje o zużyciu pamięci RAM, takie jak całkowita pojemność RAM, używana przestrzeń, wolna przestrzeń i procentowe zużycie pamięci.
+
+save_to_file(data)
+Zapisuje dane do pliku system_data.txt.
+
+check_updates()
+Sprawdza aktualizacje dla systemu operacyjnego i zapisuje dane do pliku system_data.txt.
+
+save_to_external_file(data, filename)
+Zapisuje dane do zewnętrznego pliku o podanej nazwie.
+
+encrypt_file(file_path)
+Szyfruje plik za pomocą klucza szyfrowania i zapisuje go jako plik z rozszerzeniem .enc.
+
+display_menu()
+Wyświetla menu główne programu i obsługuje wybór użytkownika, wykonując odpowiednie funkcje na podstawie wyboru.
+
+main()
+Główna funkcja programu, która uruchamia menu.
+
+## Szyfrowanie plików
+Program umożliwia szyfrowanie plików za pomocą klucza szyfrowania. Po szyfrowaniu plików, otrzymujemy plik z rozszerzeniem .enc.
 
 ## Zapisywanie danych do plików
 Program umożliwia zapisywanie danych do pliku system_data.txt oraz do zewnętrznych plików o podanej przez użytkownika nazwie.
-
-## Zabezpieczenia
-Program nie posiada wbudowanych zabezpieczeń na poziomie kodu źródłowego. Aby zapewnić bezpieczeństwo danych, należy odpowiednio zabezpieczyć dostęp do plików klucza szyfrowania, jak również ograniczyć dostęp do plików logów oraz plików systemowych.
